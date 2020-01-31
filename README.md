@@ -18,5 +18,4 @@ A0, A1 y A2 son los pines de dirección. Esto es algo clave con este dispositivo
 
 Aquí hay una tabla de las combinaciones de direcciones, tendremos A0, A1 y A2 vinculados a 0v, por lo que significa su dirección 0x20 
 
-https://i0.wp.com/www.esp8266learning.com/wp-content/uploads/2017/12/MCP23017-addresspins1.jpg?w=537
-
+ <img src="https://i0.wp.com/www.esp8266learning.com/wp-content/uploads/2017/12/MCP23017-addresspins1.jpg?w=537" alt="pinout" height="484" width="328"> 
