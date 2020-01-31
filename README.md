@@ -30,7 +30,7 @@ Obviamente, también puede usar portb, pero necesitaría cambiar el ejemplo de c
 Código
 
 No estamos utilizando ninguna biblioteca aquí, un ejemplo simple en el que básicamente envía un byte de datos: estamos enviando AA y luego 55 
-
+<pre><code>
 #include "Wire.h"
  
 void setup()
@@ -56,3 +56,4 @@ Wire.write((byte)0x55); // value to send
 Wire.endTransmission();
 delay(500);
 }
+</code></pre>
