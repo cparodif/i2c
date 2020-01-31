@@ -5,7 +5,7 @@ http://www.esp8266learning.com/esp8266-mcp23017-example.php
 El mcp23017 es un expansor de puerto de E / S paralelo de propósito general de 16 bits para aplicaciones de bus I2C.
 
 El puerto de E/S de 16 bits consta funcionalmente de dos puertos de 8 bits (PORTA y PORTB). El MCP23017 se puede configurar para funcionar en modos de 8 bits o 16 bits. Veamos el pinout en la imagen 
-https://i1.wp.com/www.esp8266learning.com/wp-content/uploads/2017/12/mcp23017-pinout-500x500.jpg?resize=500%2C500
+ <img src="https://i1.wp.com/www.esp8266learning.com/wp-content/uploads/2017/12/mcp23017-pinout-500x500.jpg?resize=500%2C500" alt="pinout" height="500" width="500"> 
 
 El MCP23017 funciona bien con 3.3v. Entonces conectamos Vdd al terminal 3v3 del módulo ESP8266 y, por supuesto, conectamos Vss a tierra.
 Los pines GPB0-GPB7 y GPA0-GPA7 son los 16 puertos de E/S.
