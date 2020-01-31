@@ -27,7 +27,7 @@ No hemos mostrado el microcontrolador aquí, esto muestra solo las salidas LED, 
 
 Obviamente, también puede usar portb, pero necesitaría cambiar el ejemplo de código 
 
-<img src="https://i1.wp.com/www.esp8266learning.com/wp-content/uploads/2017/12/mcp23017-and-8-leds_schem.png" alt="conexiones" height="376" width="484"> 
+<img src="https://i1.wp.com/www.esp8266learning.com/wp-content/uploads/2017/12/mcp23017-and-8-leds_schem.png" alt="conexiones"  width="800"> 
 
 Código
 
