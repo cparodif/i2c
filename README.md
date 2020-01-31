@@ -18,4 +18,41 @@ A0, A1 y A2 son los pines de dirección. Esto es algo clave con este dispositivo
 
 Aquí hay una tabla de las combinaciones de direcciones, tendremos A0, A1 y A2 vinculados a 0v, por lo que significa su dirección 0x20 
 
- <img src="https://i0.wp.com/www.esp8266learning.com/wp-content/uploads/2017/12/MCP23017-addresspins1.jpg?w=537" alt="pinout" height="328" width="484"> 
+ <img src="https://i0.wp.com/www.esp8266learning.com/wp-content/uploads/2017/12/MCP23017-addresspins1.jpg?w=537" alt="direcciones" height="328" width="484"> 
+
+Esquema
+
+No hemos mostrado el microcontrolador aquí, esto muestra solo las salidas LED, simplemente conecte sus pines ESP8266 I2C a los pines mcp23017 correspondientes
+
+Obviamente, también puede usar portb, pero necesitaría cambiar el ejemplo de código 
+ <img src="https://i1.wp.com/www.esp8266learning.com/wp-content/uploads/2017/12/mcp23017-and-8-leds_schem.png" alt="conexiones" height="376" width="484"> 
+
+Código
+
+No estamos utilizando ninguna biblioteca aquí, un ejemplo simple en el que básicamente envía un byte de datos: estamos enviando AA y luego 55 
+
+#include "Wire.h"
+ 
+void setup()
+{
+Wire.begin(); // wake up I2C bus
+// set I/O pins to outputs
+Wire.beginTransmission(0x20);
+Wire.write(0x00); // IODIRA register
+Wire.write(0x00); // set all of port A to outputs
+Wire.endTransmission();
+}
+ 
+void loop()
+{
+Wire.beginTransmission(0x20);
+Wire.write(0x12); // address bank A
+Wire.write((byte)0xAA); // value to send
+Wire.endTransmission();
+delay(500);
+Wire.beginTransmission(0x20);
+Wire.write(0x12); // address bank A
+Wire.write((byte)0x55); // value to send
+Wire.endTransmission();
+delay(500);
+}
